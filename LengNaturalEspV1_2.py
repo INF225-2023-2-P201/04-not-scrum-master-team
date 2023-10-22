@@ -48,9 +48,9 @@ if intencion in dict_NL.get("VERB", []):
         instruccion = 1
     elif intencion == "enviar" or intencion == "mandar" or intencion == "hacer":
         instruccion = 2
-    else:
-        print("No se puede crear la instrucción, ya que no hay una opción que se asocie con el mensaje")
-    
+    elif intencion == "crear" or intencion == "editar":
+        instruccion = 3
+
     if instruccion == 1:
         interface = "FastEthernet"
         flag = True
@@ -176,6 +176,7 @@ if intencion in dict_NL.get("VERB", []):
             else:
                 print("No se puede crear la instrucción, ya que la IP del dispositivo no existe en la red")
 
+    # ping o mensaje a otro dispositivo
     elif instruccion == 2:
         i = 0
         for token in doc:
@@ -194,34 +195,36 @@ if intencion in dict_NL.get("VERB", []):
                     ip_dest="172.168.130.2"
             elif token.text in dict_NL.get("PROPN", []):
                 i+=1      
-        print('ping ' + ip_dest)    
-
-# código de edición de vlan
-validate = False
-addquit = bool
-interfaces = []
-if intencion in dict_NL.get("VERB", []):
-    if intencion == "crear" or intencion == "editar":
-        for token in doc:
-            if token.pos_ == "NOUN":
-                if token.text in dict_NL.get("NOUN", []):
-                    validate = True
-            if token.pos_ == "PROPN" and validate:
-                if "vlan" in token.text.lower():
-                    vlanId = token.text[4:]
-            if token.pos_ == "VERB":
-                    if token.text in dict_NL.get("VERB", []):
-                        if token.text == "agregar" or token.text == "agregarla":
-                            addquit = True
-                        elif token.text == "quitar" or token.text == "quitarla":
-                            addquit = False
-            if "Fast" in token.text or "Gigabit" in token.text:
-                    interfaces.append(token.text)
-        if validate:
-            vlanInput_command = 'vlan' + vlanId
-            switchportModeAccess_command = 'switchport mode access'
-            switchportModeAccessVlan_command = 'switchport access vlan' + vlanId
-            print(f'$ {start_command[1]}\n$ vlan {vlanId}')
-            for interface in interfaces:
-                print(f'$ interface {interface}\n$ {switchportModeAccess_command}\n$ {switchportModeAccessVlan_command}')
-            print('$ exit')
+        print('ping ' + ip_dest)
+        
+        
+    # código de edición de vlan    
+    elif instruccion == 3:
+        validate = False
+        addquit = bool
+        interfaces = []
+        if intencion in dict_NL.get("VERB", []):
+            if intencion == "crear" or intencion == "editar":
+                for token in doc:
+                    if token.pos_ == "NOUN":
+                        if token.text in dict_NL.get("NOUN", []):
+                            validate = True
+                    if token.pos_ == "PROPN" and validate:
+                        if "vlan" in token.text.lower():
+                            vlanId = token.text[4:]
+                    if token.pos_ == "VERB":
+                            if token.text in dict_NL.get("VERB", []):
+                                if token.text == "agregar" or token.text == "agregarla":
+                                    addquit = True
+                                elif token.text == "quitar" or token.text == "quitarla":
+                                    addquit = False
+                    if "Fast" in token.text or "Gigabit" in token.text:
+                            interfaces.append(token.text)
+                if validate:
+                    vlanInput_command = 'vlan' + vlanId
+                    switchportModeAccess_command = 'switchport mode access'
+                    switchportModeAccessVlan_command = 'switchport access vlan ' + vlanId
+                    print(f'$ {start_command[1]}\n$ vlan {vlanId}')
+                    for interface in interfaces:
+                        print(f'$ interface {interface}\n$ {switchportModeAccess_command}\n$ {switchportModeAccessVlan_command}')
+                    print('$ exit')
