@@ -146,6 +146,5 @@ Este README te guiará a través de los pasos para instalar XAMPP, MySQL y conec
 4. Abre tu navegador y visita `http://localhost:8000` para ver tu página web local.
 
 Ahora has instalado XAMPP, configurado MySQL y conectado tu proyecto de Django para levantar una página web local. ¡Disfruta desarrollando tu sitio web!
-```
 
 Asegúrate de reemplazar `"nombre_de_tu_base_de_datos"`, `"tu_usuario_de_mysql"`, y `"tu_contraseña_de_mysql"` con la información correcta de tu base de datos MySQL. Además, adapta los nombres de proyecto y aplicación según tus necesidades.
