@@ -148,3 +148,18 @@ Este README te guiará a través de los pasos para instalar XAMPP, MySQL y conec
 Ahora has instalado XAMPP, configurado MySQL y conectado tu proyecto de Django para levantar una página web local. ¡Disfruta desarrollando tu sitio web!
 
 Asegúrate de reemplazar `"nombre_de_tu_base_de_datos"`, `"tu_usuario_de_mysql"`, y `"tu_contraseña_de_mysql"` con la información correcta de tu base de datos MySQL. Además, adapta los nombres de proyecto y aplicación según tus necesidades.
+
+##Sintaxis del codigo 
+
+Para el correcto funcionamiento del código se necesita seguir una sintaxis al realizar la petición de lenguaje natural la cual es la siguiente.
+
+* Se necesita que el mensaje contenga como verbo principal permitir/acceder para permitir el paso de información o denegar/bloquear para denegar el paso información.
+* Se necesita un adjetivo el cual puede ser "saliente" o "entrante", esto para señalar si se bloquea o permite la informacion saliente o entrante de los nodos.
+* Se necesitan señalar los 2 nodos que van a ser afectados por la instrucción, la forma de señalarlos puede ser a través de la ip correspondiente a los nodos o a través del nombre de este nodos, también puede ser una combinación de estos 2(señalando primero la ip de un nodo y después el nombre del otro nodo)
+Un ejemplo de instrucción puede ser el siguiente: denegar todo el tráfico entrante del nodo Usuario a google
+
+* Para la edición de vlan, se debe ingresar la intención de la siguiente manera "crear una VLAN llamada VLAN1 y agregarla a las interfaces FastEthernet0/1 y FastEthernet0/2"
+Recordar que al ingresar el nombre de vlan, debe ser tal que "VLAN" y las interfaces deben ser las asociadas a la red que se mostró en el hito 1.
+
+*Para el cambio de ip, se debe ingresar la inteción de la siguiente manera "cambiar ip de <Numero IP/Nombre host> a "
+Se debe tener cuidado con el nombre del host, debe ser exacto al de la red.
