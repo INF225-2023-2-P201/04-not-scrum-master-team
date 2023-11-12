@@ -106,9 +106,9 @@ Este README te guiará a través de los pasos para instalar XAMPP, MySQL y conec
    DATABASES = {
        'default': {
            'ENGINE': 'django.db.backends.mysql',
-           'NAME': 'nombre_de_tu_base_de_datos',
+           'NAME': 'not_scrum_master_team',
            'USER': 'tu_usuario_de_mysql',
-           'PASSWORD': 'tu_contraseña_de_mysql',
+           'PASSWORD': '<contraseña_de_mysql>',
            'HOST': 'localhost',
            'PORT': '3306',
        }
