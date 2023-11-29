@@ -74,7 +74,7 @@ Este README te guiará a través de los pasos para instalar XAMPP, MySQL y conec
 
 1. Abre el Panel de Control de XAMPP.
 2. Haz clic en el botón "Admin" para abrir phpMyAdmin en tu navegador.
-3. Exporta la base de datos, el ejemplo se encuentra  [aquí](https://www.youtube.com/watch?v=z5-F9TomceQ&t=411s), la base de datos se encuentra [acá (not_scrum_master_team.sql)](https://github.com/paein27/ProyectoIngesoft/tree/main/proyetoIngesoft).
+3. Exporta la base de datos, el ejemplo se encuentra  [aquí](https://www.youtube.com/watch?v=z5-F9TomceQ&t=411s), la base de datos se encuentra [acá](https://github.com/paein27/ProyectoIngesoft/tree/main/proyetoIngesoft).
 
 ## Configuración de un entorno virtual de Django
 
@@ -83,7 +83,8 @@ Este README te guiará a través de los pasos para instalar XAMPP, MySQL y conec
    ```
    pip install Django
    ```
-3. Crea un entorno virtual para tu proyecto:
+3. Debe descargar el proyecto completo Django del repositorio mencionado en el paso 3 de Configuración de MySQL.
+3. Habiendo descargado el proyecto, crea un entorno virtual sobre este directorio (donde aparezca manage.py):
    ```
    python -m venv myenv
    ```
