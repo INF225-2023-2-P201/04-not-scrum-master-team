@@ -138,13 +138,18 @@ Este README te guiará a través de los pasos para instalar XAMPP, MySQL y conec
    ```
 
 2. Define las rutas, vistas y plantillas para tu aplicación.
-3. Ejecuta el servidor de desarrollo:
+
+   ```
+   python manage.py runserver
+   ```
+   
+4. Ejecuta el servidor de desarrollo:
 
    ```
    python manage.py runserver
    ```
 
-4. Abre tu navegador y visita `http://localhost:8000` para ver tu página web local.
+5. Abre tu navegador y visita `http://localhost:8000` para ver tu página web local.
 
 Ahora has instalado XAMPP, configurado MySQL y conectado tu proyecto de Django para levantar una página web local. ¡Disfruta desarrollando tu sitio web!
 
@@ -162,3 +167,7 @@ Recordar que al ingresar el nombre de vlan, debe ser tal que "VLAN" y las interf
 
 *Para el cambio de ip, se debe ingresar la inteción de la siguiente manera "cambiar ip de <Numero IP/Nombre host> a "
 Se debe tener cuidado con el nombre del host, debe ser exacto al de la red.
+
+## Funcionamiento del proyecto final
+
+Posterior a las instalaciones realizadas anteriormente se podran realizar peticiones 
