@@ -140,7 +140,7 @@ Este README te guiará a través de los pasos para instalar XAMPP, MySQL y conec
 2. Define las rutas, vistas y plantillas para tu aplicación. En nuestro caso utilizaremos el proyecto final ubicado en el siguiente repositorio
 
    ```
-   
+   https://github.com/paein27/ProyectoIngesoft
    ```
    
 4. Ejecuta el servidor de desarrollo:
@@ -170,4 +170,10 @@ Se debe tener cuidado con el nombre del host, debe ser exacto al de la red.
 
 ## Funcionamiento del proyecto final
 
-Posterior a las instalaciones realizadas anteriormente se podran realizar peticiones 
+Posterior a las instalaciones realizadas anteriormente se podrán observar las siguientes funciones del proyecto:
+
+* Se podran realizar peticiones en lenguaje natural en la interfaz de nuestra página web utilizando el lenguaje definido anteriormente.
+* Las peticiones se podrán visualizar utilizando el botón de Historial.
+* Las peticiones se podrán visualizar en la base de datos en la tabla "peticiones".
+* Los nombres de los dispositivos de la red se podrán visualizar utilizando el botón de Dispositivos de la interfaz de la página web.
+* Los cambios relacionados con los cambios de IP se podrán visualizar de forma automática en la tabla dispositivos de la base de datos. 
