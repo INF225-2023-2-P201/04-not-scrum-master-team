@@ -137,10 +137,10 @@ Este README te guiará a través de los pasos para instalar XAMPP, MySQL y conec
    python manage.py startapp myapp
    ```
 
-2. Define las rutas, vistas y plantillas para tu aplicación.
+2. Define las rutas, vistas y plantillas para tu aplicación. En nuestro caso utilizaremos el proyecto final ubicado en el siguiente repositorio
 
    ```
-   python manage.py runserver
+   
    ```
    
 4. Ejecuta el servidor de desarrollo:
